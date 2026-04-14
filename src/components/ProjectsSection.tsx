@@ -3,7 +3,7 @@ import { FolderGit2 } from "lucide-react";
 
 const projects = [
   {
-    title: "ESmart Lamp IoT System",
+    title: "Smart Lamp IoT System",
     tech: "Raspberry Pi · Arduino Nano 33 BLE · Python · Flask · BLE",
     period: "Sep – Dec 2025",
     bullets: [
