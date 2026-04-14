@@ -18,9 +18,12 @@ function GithubIcon({ className }: { className?: string }) {
   );
 }
 
-const links = [
+const row1Links = [
   { icon: Mail, label: "yaqin.chen.work@gmail.com", href: "mailto:yaqin.chen.work@gmail.com" },
   { icon: Phone, label: "+358 44 952 7704", href: "tel:+358449527704" },
+];
+
+const row2Links = [
   { icon: MapPin, label: "Tampere, Finland", href: "#" },
   { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/yana-chen-ab635613b/" },
   { icon: GithubIcon, label: "GitHub", href: "https://github.com/YanaChen0510" },
@@ -78,7 +81,26 @@ export default function HeroSection() {
           transition={{ delay: 0.5 }}
           className="flex flex-wrap justify-center gap-3 mb-8"
         >
-          {links.map((link) => (
+          {row1Links.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target={link.href.startsWith("http") ? "_blank" : undefined}
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-secondary-foreground text-sm hover:bg-accent transition-colors"
+            >
+              <link.icon className="w-4 h-4 text-primary" />
+              {link.label}
+            </a>
+          ))}
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55 }}
+          className="flex flex-wrap justify-center gap-3 mb-8"
+        >
+          {row2Links.map((link) => (
             <a
               key={link.label}
               href={link.href}
