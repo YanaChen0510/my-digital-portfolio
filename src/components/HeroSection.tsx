@@ -42,7 +42,7 @@ export default function HeroSection() {
           <img
             src={cvPhoto}
             alt="Yana Chen"
-            className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-top border-4 border-primary/30 shadow-lg shadow-primary/20"
+            className="w-48 h-48 md:w-56 md:h-56 rounded-full object-cover object-center border-4 border-primary/30 shadow-lg shadow-primary/20"
           />
         </motion.div>
         <motion.p
