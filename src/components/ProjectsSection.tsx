@@ -5,7 +5,7 @@ const projects = [
   {
     title: "Smart Lamp IoT System",
     tech: "Raspberry Pi · Arduino Nano 33 BLE · Python · Flask · BLE",
-    period: "Sep – Dec 2025",
+    period: "Feb – Apr 2026",
     bullets: [
       "Built end-to-end IoT smart lamp with auto-brightness using APDS9960 and HTS221 sensors; drove external lamp via PWM.",
       "Implemented BLE GATT pipeline (Pi as Central, Nano as Peripheral) with Notify/Write for telemetry and commands.",
@@ -16,7 +16,7 @@ const projects = [
   {
     title: "Weather-Traffic Monitoring System",
     tech: "Java · Spring Boot · React.js · Chart.js · REST APIs",
-    period: "Feb – Apr 2026",
+    period: "Sep – Dec 2025",
     bullets: [
       "Developed web platform integrating Digitraffic and Open-Meteo APIs to analyze weather impact on Finnish road traffic.",
       "Designed three-tier backend with controllers, services, and DTOs for clean separation of concerns.",
