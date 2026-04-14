@@ -10,4 +10,12 @@ export default defineConfig({
   vite: {
     base: "/my-digital-portfolio/",
   },
+  tanstackStart: {
+    prerender: {
+      enabled: true,
+      crawlLinks: true,
+      autoSubfolderIndex: true,
+      failOnError: true,
+    },
+  },
 });
