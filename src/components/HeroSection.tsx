@@ -45,7 +45,10 @@ export default function HeroSection() {
             className="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-primary/30 shadow-lg shadow-primary/20"
           />
         </motion.div>
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
           className="text-primary font-heading font-semibold tracking-widest uppercase text-sm mb-4"
