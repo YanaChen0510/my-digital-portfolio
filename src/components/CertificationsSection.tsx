@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
+import pmpCert from "@/assets/pmp-cert.jpg";
 
 const certs = [
-  { name: "PMP Certified", org: "Project Management Institute", year: "2021" },
+  { name: "PMP Certified", org: "Project Management Institute", year: "2021", image: pmpCert },
   { name: "Alibaba Cloud – Cloud Server ECS", org: "Alibaba Cloud", year: "2022" },
   { name: "Huawei IP Pre-sales Specialist", org: "Huawei", year: "2019" },
   { name: "Cisco CCNA", org: "Cisco", year: "2018" },
@@ -34,6 +35,15 @@ export default function CertificationsSection() {
             >
               <p className="font-heading font-semibold text-sm mb-1">{cert.name}</p>
               <p className="text-muted-foreground text-xs">{cert.org} · {cert.year}</p>
+              {cert.image && (
+                <a href={cert.image} target="_blank" rel="noopener noreferrer">
+                  <img
+                    src={cert.image}
+                    alt={`${cert.name} certificate`}
+                    className="mt-3 rounded-lg border border-border w-full object-cover hover:opacity-90 transition-opacity cursor-pointer"
+                  />
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
