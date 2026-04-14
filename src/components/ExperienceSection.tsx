@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
+import aimbF21 from "@/assets/aimb-f21.jpg";
+import aimbH70e from "@/assets/aimb-h70e.png";
 
 const experiences = [
   {
