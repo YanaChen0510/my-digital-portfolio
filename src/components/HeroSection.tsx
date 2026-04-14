@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Phone, MapPin, Github, Linkedin, FileDown } from "lucide-react";
+import { Mail, Phone, MapPin, ExternalLink } from "lucide-react";
 
 const links = [
   { icon: Mail, label: "yaqin.chen.work@gmail.com", href: "mailto:yaqin.chen.work@gmail.com" },
