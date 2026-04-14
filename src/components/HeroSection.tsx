@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import cvPhoto from "@/assets/cv-photo.jpg";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
