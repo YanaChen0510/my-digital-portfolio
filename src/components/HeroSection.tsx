@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, MapPin } from "lucide-react";
+import cvPhoto from "@/assets/cv-photo.jpg";
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -31,11 +32,23 @@ export default function HeroSection() {
       {/* Glow orb */}
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-glow/10 blur-[120px] animate-glow-pulse pointer-events-none" />
 
-      <div className="relative z-10 max-w-3xl w-full text-center">
+      <div className="relative z-10 max-w-3xl w-full text-center flex flex-col items-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.1 }}
+          className="mb-8"
+        >
+          <img
+            src={cvPhoto}
+            alt="Yana Chen"
+            className="w-36 h-36 md:w-44 md:h-44 rounded-full object-cover border-4 border-primary/30 shadow-lg shadow-primary/20"
+          />
+        </motion.div>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.1 }}
+          transition={{ delay: 0.15 }}
           className="text-primary font-heading font-semibold tracking-widest uppercase text-sm mb-4"
         >
           Embedded Engineer · Product Manager
