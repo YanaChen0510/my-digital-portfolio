@@ -93,6 +93,18 @@ export default function HeroSection() {
               {link.label}
             </a>
           ))}
+          {socialLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-secondary-foreground text-sm hover:bg-accent transition-colors"
+            >
+              <link.icon className="w-4 h-4 text-primary" />
+              {link.label}
+            </a>
+          ))}
         </motion.div>
 
         <motion.div
