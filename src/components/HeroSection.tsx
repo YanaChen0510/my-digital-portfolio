@@ -21,8 +21,8 @@ const links = [
   { icon: Mail, label: "yaqin.chen.work@gmail.com", href: "mailto:yaqin.chen.work@gmail.com" },
   { icon: Phone, label: "+358 44 952 7704", href: "tel:+358449527704" },
   { icon: MapPin, label: "Tampere, Finland", href: "#" },
-  { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/yana-chen" },
-  { icon: GithubIcon, label: "GitHub", href: "https://github.com/yana-chen" },
+  { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/yana-chen-ab635613b/" },
+  { icon: GithubIcon, label: "GitHub", href: "https://github.com/YanaChen0510" },
 ];
 
 export default function HeroSection() {
