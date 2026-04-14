@@ -18,13 +18,13 @@ function GithubIcon({ className }: { className?: string }) {
   );
 }
 
-const links = [
+const row1Links = [
   { icon: Mail, label: "yaqin.chen.work@gmail.com", href: "mailto:yaqin.chen.work@gmail.com" },
   { icon: Phone, label: "+358 44 952 7704", href: "tel:+358449527704" },
-  { icon: MapPin, label: "Tampere, Finland", href: "#" },
 ];
 
-const socialLinks = [
+const row2Links = [
+  { icon: MapPin, label: "Tampere, Finland", href: "#" },
   { icon: LinkedinIcon, label: "LinkedIn", href: "https://www.linkedin.com/in/yana-chen-ab635613b/" },
   { icon: GithubIcon, label: "GitHub", href: "https://github.com/YanaChen0510" },
 ];
