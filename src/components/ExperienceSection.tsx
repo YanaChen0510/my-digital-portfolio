@@ -14,6 +14,7 @@ const experiences = [
       "Led supplier and BOM management, negotiating 20% cost reduction and exceeding GP targets by 10%.",
       "Delivered technical training for global sales teams and authored user manuals and technical documentation.",
     ],
+    images: [aimbF21, aimbH70e],
   },
   {
     company: "Garena Online Private Limited",
@@ -83,6 +84,19 @@ export default function ExperienceSection() {
                   </li>
                 ))}
               </ul>
+              {exp.images && exp.images.length > 0 && (
+                <div className="grid grid-cols-2 gap-3 mt-4">
+                  {exp.images.map((img, j) => (
+                    <a key={j} href={img} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={img}
+                        alt={`${exp.company} product ${j + 1}`}
+                        className="rounded-lg border border-border w-full object-cover hover:opacity-90 transition-opacity cursor-pointer"
+                      />
+                    </a>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
