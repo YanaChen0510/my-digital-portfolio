@@ -1,19 +1,36 @@
 import { createFileRoute } from "@tanstack/react-router";
+import NavBar from "@/components/NavBar";
+import HeroSection from "@/components/HeroSection";
+import ExperienceSection from "@/components/ExperienceSection";
+import EducationSection from "@/components/EducationSection";
+import ProjectsSection from "@/components/ProjectsSection";
+import SkillsSection from "@/components/SkillsSection";
+import CertificationsSection from "@/components/CertificationsSection";
+import Footer from "@/components/Footer";
 
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Yana Chen – Embedded Engineer & Product Manager" },
+      { name: "description", content: "Hardware and infrastructure professional with 6+ years of experience in industrial hardware, embedded systems, and network solutions. PMP certified." },
+      { property: "og:title", content: "Yana Chen – Embedded Engineer & Product Manager" },
+      { property: "og:description", content: "Portfolio showcasing work experience, projects, and technical skills in embedded systems and infrastructure." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. For sites with multiple pages (About, Services, Contact, etc.),
-// create separate route files (about.tsx, services.tsx, contact.tsx) — don't put all pages in this file.
-function PlaceholderIndex() {
+function Index() {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen">
+      <NavBar />
+      <HeroSection />
+      <ExperienceSection />
+      <EducationSection />
+      <ProjectsSection />
+      <SkillsSection />
+      <CertificationsSection />
+      <Footer />
     </div>
   );
-}
-
-function Index() {
-  return <PlaceholderIndex />;
 }
