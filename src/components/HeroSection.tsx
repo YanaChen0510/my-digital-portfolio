@@ -81,7 +81,7 @@ export default function HeroSection() {
           transition={{ delay: 0.5 }}
           className="flex flex-wrap justify-center gap-3 mb-8"
         >
-          {links.map((link) => (
+          {row1Links.map((link) => (
             <a
               key={link.label}
               href={link.href}
@@ -93,11 +93,18 @@ export default function HeroSection() {
               {link.label}
             </a>
           ))}
-          {socialLinks.map((link) => (
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.55 }}
+          className="flex flex-wrap justify-center gap-3 mb-8"
+        >
+          {row2Links.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              target="_blank"
+              target={link.href.startsWith("http") ? "_blank" : undefined}
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-secondary text-secondary-foreground text-sm hover:bg-accent transition-colors"
             >
