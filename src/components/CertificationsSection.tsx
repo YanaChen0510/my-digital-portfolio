@@ -1,12 +1,15 @@
 import { motion } from "framer-motion";
 import { Award } from "lucide-react";
 import pmpCert from "@/assets/pmp-cert.jpg";
+import huaweiCert from "@/assets/huawei-cert.jpg";
+import alibabaCert from "@/assets/alibaba-cert.png";
+import ccnaCert from "@/assets/ccna-cert.jpg";
 
 const certs = [
   { name: "PMP Certified", org: "Project Management Institute", year: "2021", image: pmpCert },
-  { name: "Alibaba Cloud – Cloud Server ECS", org: "Alibaba Cloud", year: "2022" },
-  { name: "Huawei IP Pre-sales Specialist", org: "Huawei", year: "2019" },
-  { name: "Cisco CCNA", org: "Cisco", year: "2018" },
+  { name: "Alibaba Cloud – Cloud Server ECS", org: "Alibaba Cloud", year: "2022", image: alibabaCert },
+  { name: "Huawei IP Pre-sales Specialist", org: "Huawei", year: "2019", image: huaweiCert },
+  { name: "Cisco CCNA", org: "Cisco", year: "2018", image: ccnaCert },
 ];
 
 export default function CertificationsSection() {
