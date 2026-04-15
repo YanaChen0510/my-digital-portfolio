@@ -34,6 +34,14 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: Copy index as 404 fallback
+        run: cp ./dist/client/index.html ./dist/client/404.html
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist/client
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
@@ -45,3 +53,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
