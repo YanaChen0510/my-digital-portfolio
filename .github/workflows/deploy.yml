@@ -34,13 +34,17 @@ jobs:
       - name: Build
         run: bun run build
 
-      - name: Copy index as 404 fallback
-        run: cp ./dist/client/index.html ./dist/client/404.html
+      - name: Debug build output
+        run: |
+          echo "=== dist/ contents ==="
+          ls -la ./dist/ || echo "NO dist/ folder found"
+          echo "=== searching for index.html ==="
+          find . -name "index.html" -not -path "*/node_modules/*"
+          echo "=== dist/client contents ==="
+          ls -la ./dist/client/ || echo "NO dist/client/ folder found"
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist/client
+      - name: Copy 404 fallback
+        run: cp ./dist/client/index.html ./dist/client/404.html
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -53,4 +57,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-
