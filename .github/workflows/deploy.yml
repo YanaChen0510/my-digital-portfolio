@@ -36,15 +36,24 @@ jobs:
 
       - name: Debug build output
         run: |
-          echo "=== dist/ contents ==="
-          ls -la ./dist/ || echo "NO dist/ folder found"
-          echo "=== searching for index.html ==="
-          find . -name "index.html" -not -path "*/node_modules/*"
-          echo "=== dist/client contents ==="
-          ls -la ./dist/client/ || echo "NO dist/client/ folder found"
+          echo "=== pwd ==="
+          pwd
+          echo "=== top-level files ==="
+          find . -maxdepth 2 -type f | sort
+          echo "=== dist tree ==="
+          find ./dist -maxdepth 4 -type f | sort || true
 
       - name: Copy 404 fallback
-        run: cp ./dist/client/index.html ./dist/client/404.html
+        run: |
+          if [ -f ./dist/client/index.html ]; then
+            cp ./dist/client/index.html ./dist/client/404.html
+            echo "404 fallback created"
+          else
+            echo "ERROR: ./dist/client/index.html not found"
+            echo "Files under dist:"
+            find ./dist -maxdepth 3 -type f | sort || true
+            exit 1
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
